@@ -1,0 +1,123 @@
+/* COMMON */
+
+body {
+
+    background-color: #354649;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: #E0E7E9;
+
+}
+
+
+
+.material-icons.md-48 { font-size: 48px; }
+
+/* HEADER */
+
+header .inner {
+
+    position: fixed;
+
+    width: 140px;
+    height: 800px;
+
+    border-radius: 30px;
+    margin-top: calc(150px/2);
+
+    left: -40px;
+
+    background-color: rgba(255, 255, 255, 0.185);
+
+}
+
+/* MENU */
+
+.menu__blank { width: 40px; }
+
+.menu__content {
+    
+    width: 100px;
+    height: 200px;
+    
+}
+
+.menu {
+
+    margin: auto 0;
+
+    position: absolute;
+    color: #E0E7E9;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    
+}
+
+.menu td {
+    
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.menu .menu__txt {
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+}
+
+/* focus shadow */
+
+.light {
+
+    margin: auto 0;
+
+    box-sizing: border-box;
+
+    position: absolute;
+    color: #354649;
+
+    top: 0;
+    left: 0;
+
+}
+
+.light td { 
+    
+    display: inline-block;
+    position: absolute;
+
+}
+
+.light .active td{
+
+    left: 87px;
+
+    opacity: 0;
+    font-size: 0px;
+    transition: font-size 0.8s, opacity 1s;
+
+}
+
+.light .select td{ 
+
+    left: 33px;
+    
+    opacity: 100;
+    font-size: 110px;
+    transition: font-size 0.8s, opacity 1s;
+
+}
+
+.light .home.select td { top: 18px; }
+.light .intro.select td { top: 221px; }
+.light .skill.select td { top: 425px; }
+.light .project.select td { top: 630px; }
