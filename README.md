@@ -17,4 +17,8 @@
   1. homepage 작성
   2. menu 애니메이션 문제 수정
 
+[ header 및 menu 애니메이션 작성 / 수정 + 열고 닫기 ]
 ![day 1~2](https://user-images.githubusercontent.com/95046369/195780266-a511d4a8-bf84-4eb2-9cae-2c28a7d7358c.gif)
+
+[ homepage 작성 ]
+![day 2](https://user-images.githubusercontent.com/95046369/195780796-c66367b0-85a1-4e30-b579-e3f6d39b5869.gif)
