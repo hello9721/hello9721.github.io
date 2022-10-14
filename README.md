@@ -16,3 +16,5 @@
 > 2022-10-14
   1. homepage 작성
   2. menu 애니메이션 문제 수정
+
+![day 1~2](https://user-images.githubusercontent.com/95046369/195780266-a511d4a8-bf84-4eb2-9cae-2c28a7d7358c.gif)
