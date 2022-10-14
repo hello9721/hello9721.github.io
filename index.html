@@ -8,14 +8,19 @@
     <title>P O R T F O L I O</title>
 
     <link rel="stylesheet" href="./CSS/common.css">
-
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <script defer src="./JS/common.js"></script>
+    <script defer src="./JS/index.js"></script>
 </head>
 
 <body>
+    <!-- HEADER & MENU -->
     <header>
-        <div class="inner">
+        <div class="inner hide">
+            
             <table class="menu">
                 <tr class="home" onclick="getVal('home')">
                     <td class="menu__blank"></td>
@@ -78,6 +83,7 @@
                     </td>
                 </tr>
             </table>
+            
             <table class="light">
                 <tr class="home active select">
                     <td class="menu__blank"></td>
@@ -104,9 +110,63 @@
                     </td>
                 </tr>
             </table>
-        </div>
+            
+            <table class="btn">
+                <tr>
+                    <td class="btn__hide btn__area" onclick="hide()">
+                        <span class="material-symbols-outlined" onclick="hide()">
+                            arrow_back_ios
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn__show btn__area" onclick="show()">
+                        <span class="material-symbols-outlined" onclick="show()">
+                            arrow_forward_ios
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn__showText">
+                        <div>
+                            MENU
+                        </div> 
+                    </td>
+                </tr>
+            </table>
 
+        </div>
     </header>
+
+    <!-- HOMEPAGE -->
+    <div class="main load">
+        
+        <div class="main__title1">
+            <div class="title1"> Hello, </div>
+        </div>
+        <div class="main__title2">
+            <div class="title2"> World! </div>
+        </div>
+        
+        <div class="main__content">
+            <div class="subtitle">
+                <span class="highlight1">저의 첫 포트폴리오 사이트에 오신 것을 환영합니다!</span>
+            </div>
+            <div class="desc">
+                안녕하세요! 항상 <span class="highlight3">어제보다 더 나아가는 개발자 이하나</span> 입니다. <br><br>
+                여러 길고 짧은 프로그래밍 학습 과정들을 통해 프로그래밍에 대한 기초를 단단히 다지고, <br>
+                이제는 활용하고 응용하며 역량을 키워나가는 중 입니다. <br><br>
+                제가 느끼는 좋은 프로그램은 겉의 화려함보다 <br>
+                <span class="highlight3">사용자들이 보기 편하고 사용하기 편한 </span><span class="highlight1">심플함</span>을 가진 프로그램입니다. <br><br>
+                신입이기에 경력보다 경험은 부족하다는 것을 인정합니다. <br>
+                하지만 신입이기에 <span class="highlight3">아직 스러지지 않은</span><span class="highlight1"> 열정</span>을 가지고 있습니다. <br><br>
+                잘 부탁드립니다.
+            </div>
+        </div>
+        
+        <div class="main__bg"></div>
+
+    </div>
 </body>
 
 </html>

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P O R T F O L I O</title>
+
     <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="../JS/common.js"></script>
@@ -14,7 +16,7 @@
 
 <body>
     <header>
-        <div class="inner">
+        <div class="inner hide">
             <table class="menu">
                 <tr class="home" onclick="getVal('home')">
                     <td class="menu__blank"></td>
@@ -100,6 +102,29 @@
                     <td class="menu__blank"></td>
                     <td class="menu__content">
                         ●
+                    </td>
+                </tr>
+            </table>
+            <table class="btn">
+                <tr>
+                    <td class="btn__hide btn__area" onclick="hide()">
+                        <span class="material-symbols-outlined" onclick="hide()">
+                            arrow_back_ios
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn__show btn__area" onclick="show()">
+                        <span class="material-symbols-outlined" onclick="show()">
+                            arrow_forward_ios
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn__showText">
+                        <div>
+                            MENU
+                        </div> 
                     </td>
                 </tr>
             </table>

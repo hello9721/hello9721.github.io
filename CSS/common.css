@@ -13,9 +13,14 @@ a {
 
 }
 
-
-
 .material-icons.md-48 { font-size: 48px; }
+
+/* HIGHLIGHT */
+
+.highlight0 { color: #ED7458; }
+.highlight1 { color: #FFDC9F; }
+.highlight2 { color: #8E7C68; }
+.highlight3 { color: #DDC9BC; }
 
 /* HEADER */
 
@@ -27,24 +32,26 @@ header .inner {
     height: 800px;
 
     border-radius: 30px;
-    margin-top: calc(150px/2);
+    margin-top: calc((100vh - 800px)/2);
 
     left: -40px;
 
-    background-color: rgba(255, 255, 255, 0.185);
+    background-color: #5a6a6d;
+
+    transition: left 0.5s;
+
+    z-index: 99;
+
+}
+
+header .hide {
+    
+    left: -140px;
+    transition: left 0.5s;
 
 }
 
 /* MENU */
-
-.menu__blank { width: 40px; }
-
-.menu__content {
-    
-    width: 100px;
-    height: 200px;
-    
-}
 
 .menu {
 
@@ -74,7 +81,16 @@ header .inner {
 
 }
 
-/* focus shadow */
+.menu__blank { width: 40px; }
+
+.menu__content {
+    
+    width: 100px;
+    height: 200px;
+    
+}
+
+/* hover animation */
 
 .light {
 
@@ -97,15 +113,36 @@ header .inner {
 
 }
 
+/* X hover X */
+
 .light .active td{
 
     left: 87px;
 
-    opacity: 0;
-    font-size: 0px;
-    transition: font-size 0.8s, opacity 1s;
+    opacity: 100;
+    font-size: 1px;
+    transition: all 0.8s, font-size 0.8s, opacity 1s;
 
 }
+
+.light .home.active td {
+    top: 75px;
+    transition: all 0.8s;
+}
+.light .intro.active td {
+    top: 285px;
+    transition: all 0.8s;
+}
+.light .skill.active td {
+    top: 490px;
+    transition: all 0.8s;
+}
+.light .project.active td {
+    top: 690px;
+    transition: all 0.8s;
+}
+
+/* O hover O */
 
 .light .select td{ 
 
@@ -113,11 +150,95 @@ header .inner {
     
     opacity: 100;
     font-size: 110px;
-    transition: font-size 0.8s, opacity 1s;
+    transition: all 0.8s, font-size 0.8s, opacity 1s;
 
 }
 
-.light .home.select td { top: 18px; }
-.light .intro.select td { top: 221px; }
-.light .skill.select td { top: 425px; }
-.light .project.select td { top: 630px; }
+.light .home.select td {
+    top: 18px;
+    transition: all 0.8s;
+}
+.light .intro.select td {
+    top: 221px;
+    transition: all 0.8s;
+}
+.light .skill.select td {
+    top: 425px;
+    transition: all 0.8s;
+}
+.light .project.select td {
+    top: 630px;
+    transition: all 0.8s;
+}
+
+/* menu animation */
+
+header .inner .btn {
+
+    position: absolute;
+    left: 100px;
+    z-index: -1;
+
+    display: block;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 10px;
+
+    background-color: #5a6a6d;
+}
+
+header .inner.hide .btn {
+
+    position: absolute;
+    right: -30px;
+
+}
+
+header .inner .btn .btn__hide {
+
+    visibility: visible;
+    z-index: 1; 
+
+}
+header .inner.hide .btn .btn__hide {
+
+    visibility: hidden;
+    z-index: -1; 
+
+}
+
+header .inner .btn .btn__show { visibility: hidden; }
+header .inner.hide .btn .btn__show { visibility: visible; }
+
+.btn .btn__area {
+
+    position: absolute;
+
+    right: 0;
+    top: 20px;
+
+    font-size: 20px;
+    color: #354649;
+
+}
+
+.inner .btn .btn__showText { opacity: 100;}
+.inner .btn .btn__showText {
+
+    position: absolute;
+
+    top: 80px;
+    right: 0px;
+
+    color: #5a6a6d;
+    opacity: 100;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    writing-mode: vertical-lr;
+    letter-spacing: 2px;
+
+}

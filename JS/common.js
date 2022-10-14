@@ -69,3 +69,15 @@ projectEl.addEventListener("mouseout", function(){
     temp.classList.add('select');    
 
 });
+
+
+// menu hide/show
+
+const inEl = document.querySelector("header .inner");
+
+function hide() {
+    inEl.classList.add("hide");
+}
+function show() {
+    inEl.classList.remove("hide");
+}
