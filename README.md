@@ -1,11 +1,11 @@
 
+# 개발 일지
+
 ### [Let's Go This Repository Page](https://hello9721.github.io/)
 * * *
 ##### COLOR PALETTES : 354649 / 6C7A89 / A3C6C4 / E0E7E9
 ##### SUB C PALETTES : 8E7C68 / ED7458 / FFDC9F / DDC9BC
 * * *
-## 개발 일지
-
 ##### 2022-10-13
       1. 구성할 내용 정리 및 레이아웃 구상
       2. 컬러 팔레트 설정
