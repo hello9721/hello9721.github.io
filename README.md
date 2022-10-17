@@ -14,6 +14,7 @@
           :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함.
 </br>   
 > header 및 menu 애니메이션 작성 / 수정 + 열고 닫기  
+
 ![day 1~2](https://user-images.githubusercontent.com/95046369/195780266-a511d4a8-bf84-4eb2-9cae-2c28a7d7358c.gif)
 
 ##### 2022-10-14
@@ -21,6 +22,7 @@
       2. menu 애니메이션 문제 수정
 </br>   
 > homepage 작성  
+
 ![day 2](https://user-images.githubusercontent.com/95046369/195780796-c66367b0-85a1-4e30-b579-e3f6d39b5869.gif)
 
 ##### 2022-10-17
@@ -28,7 +30,9 @@
       2. 웹폰트 적용
 </br>
 > INTRODUCE page 작성 ( 미완성 )
+
 ![day3](https://user-images.githubusercontent.com/95046369/196116520-21cb8249-21d1-4904-b7a1-37a8d6c43c9b.png)
   
 > 웹폰트 적용
+
 ![day 3](https://user-images.githubusercontent.com/95046369/196117162-52e3eb0a-222e-469f-a209-22e170dafbcc.gif)
