@@ -29,3 +29,15 @@
 > homepage 작성  
 
 ![day 2](https://user-images.githubusercontent.com/95046369/195780796-c66367b0-85a1-4e30-b579-e3f6d39b5869.gif)
+
+##### 2022-10-17
+      1. Introduce page 작성 ( 프로필 이미지, ABOUT ME ) -> 미완성
+      2. 웹폰트 적용
+</br>
+
+
+> INTRODUCE page 작성 ( 미완성 )
+![day 3](https://user-images.githubusercontent.com/95046369/196115992-40c7b00b-74a0-401b-9d7c-99822ba518e5.png)
+
+> 웹폰트 적용
+![day 3](https://user-images.githubusercontent.com/95046369/196116022-ece6133c-8ff4-4562-8266-18fa9c62213a.png)
