@@ -11,10 +11,10 @@
       2. 컬러 팔레트 설정
       3. menu 및 header 작성
       4. 문제점  
-          :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함.
-</br>   
-<details>
+          :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함. 
+      <details>
 <summary>Open IMG</summary>
+
 
 > header 및 menu 애니메이션 작성 / 수정 + 열고 닫기  
 
@@ -24,10 +24,10 @@
 
 ##### 2022-10-14
       1. homepage 작성
-      2. menu 애니메이션 문제 수정
-</br> 
-<details>
+      2. menu 애니메이션 문제 수정 
+      <details>
 <summary>Open IMG</summary>
+      
       
 > homepage 작성  
 
@@ -38,9 +38,9 @@
 ##### 2022-10-17
       1. Introduce page 작성 ( 프로필 이미지, ABOUT ME ) -> 미완성
       2. 웹폰트 적용
-</br>
-<details>
+      <details>
 <summary>Open IMG</summary>
+      
       
 > INTRODUCE page 작성 ( 미완성 )
 
