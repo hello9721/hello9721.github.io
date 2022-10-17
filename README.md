@@ -12,7 +12,7 @@
       3. menu 및 header 작성
       4. 문제점  
           :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함. 
-      <details>
+<details>
 <summary>Open IMG</summary>
 
 
@@ -25,7 +25,7 @@
 ##### 2022-10-14
       1. homepage 작성
       2. menu 애니메이션 문제 수정 
-      <details>
+<details>
 <summary>Open IMG</summary>
       
       
@@ -38,7 +38,7 @@
 ##### 2022-10-17
       1. Introduce page 작성 ( 프로필 이미지, ABOUT ME ) -> 미완성
       2. 웹폰트 적용
-      <details>
+<details>
 <summary>Open IMG</summary>
       
       
