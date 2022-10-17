@@ -14,7 +14,7 @@
           :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함.
 </br>   
 <details>
-<summary>이미지 보기</summary>
+<summary>Open IMG</summary>
 
 > header 및 menu 애니메이션 작성 / 수정 + 열고 닫기  
 
@@ -27,7 +27,7 @@
       2. menu 애니메이션 문제 수정
 </br> 
 <details>
-<summary>이미지 보기</summary>
+<summary>Open IMG</summary>
       
 > homepage 작성  
 
@@ -40,7 +40,7 @@
       2. 웹폰트 적용
 </br>
 <details>
-<summary>이미지 보기</summary>
+<summary>Open IMG</summary>
       
 > INTRODUCE page 작성 ( 미완성 )
 
