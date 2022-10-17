@@ -13,7 +13,7 @@
       4. 문제점  
           :: menu의 애니메이션이 의도한 바와 다른 위치에서 시작함. 
 <details>
-<summary>Open IMG</summary>
+<summary>Open / Close</summary>
 
 
 > header 및 menu 애니메이션 작성 / 수정 + 열고 닫기  
@@ -26,7 +26,7 @@
       1. homepage 작성
       2. menu 애니메이션 문제 수정 
 <details>
-<summary>Open IMG</summary>
+<summary>Open / Close</summary>
       
       
 > homepage 작성  
@@ -39,7 +39,7 @@
       1. Introduce page 작성 ( 프로필 이미지, ABOUT ME ) -> 미완성
       2. 웹폰트 적용
 <details>
-<summary>Open IMG</summary>
+<summary>Open / Close</summary>
       
       
 > INTRODUCE page 작성 ( 미완성 )
