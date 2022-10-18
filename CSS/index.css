@@ -115,10 +115,7 @@
 
     /* 글자색 투명하게 처리 */
     color: transparent;
-    background-image: linear-gradient(
-        #354649e5,
-        #354649e5
-      ), url("../assets/main.jpg");
+    background-color: #354649;
     background-size: 200%;
     background-repeat: no-repeat;
     background-clip: text;

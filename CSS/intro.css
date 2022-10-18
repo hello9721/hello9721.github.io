@@ -4,8 +4,11 @@
 
     position: fixed;
 
-    top: 100px;
+    top: 70px;
     left: calc((100vw - 300px)/2);
+
+    width: 300px;
+    height: 300px;
 
 }
 
@@ -18,8 +21,8 @@
 
     object-fit: cover;
 
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 
     border-radius: 20px;
     opacity: 70%;
@@ -49,10 +52,10 @@
     top: 0;
     left: 0;
 
+    border-radius: 20px;
+
     width: 300px;
     height: 300px;
-
-    border-radius: 20px;
 
     background-color: rgb(77, 77, 77);
 
@@ -88,7 +91,7 @@ h1 {
 
     overflow: scroll;
 
-    top: 450px;
+    top: 420px;
     left: calc((100vw - 900px)/2);
 
     width: 900px;
@@ -105,6 +108,11 @@ h1 {
 
 .desc .desc__me {
 
+    position: absolute;
+
+    top: 20px;
+    left: 0;
+
     width: 900px;
     height: 500px;
 
@@ -112,12 +120,158 @@ h1 {
     font-weight: 700;
     letter-spacing: 1px;
 
+    opacity: 100;
+
+    transition: left 0.7s, opacity 1s;
+
 }
 
 .desc .desc__class {
 
+    position: absolute;
+
+    top: 20px;
+    right: 0;
+
+    width: 900px;
+    height: 500px;
+
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
+
+    opacity: 100;
+
+    transition: right 0.7s, opacity 1s;
+
+}
+
+/* SCROLL */
+
+.desc .desc__me.up {
+
+    left: -900px;
+    opacity: 0;
+
+    transition: left 0.7s, opacity 1s;
+
+}
+
+.desc .desc__class.down {
+
+    right: -900px;
+    opacity: 0;
+
+    transition: right 0.7s, opacity 1s;
+
+}
+
+.desc .scroll {
+    
+    width: 900px;
+    height: 510px;
+
+}
+
+/* CURSOR */
+
+.desc:hover{ cursor: url(../assets/scroll.png), auto; }
+
+/* ICON & TEXT */
+
+.me__line1 {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 100px;
+
+}
+.me__line2 { 
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 100px;
+
+}
+
+.me__container div div {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.me__container div div div {
+
+    padding-top: 12px;
+    margin: 0 10px;
+
+    letter-spacing: 3px;
+
+}
+
+/* EDUCATIONAL BACKGROUND */
+
+.desc__class .back__container {
+
+    margin: 30px;
+    margin-top: 0;
+
+    font-size: 17px;
+    letter-spacing: 3px;
+    border-collapse: collapse;
+
+}
+
+.back__container tr td { height: 50px; }
+
+.back__container .back__name {
+
+    height: 60px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.back__container tr .icon {
+    
+    width: 60px;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding-left: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+
+.back__container tr .comp {
+    
+    width: 200px;
+    text-align: left;
+    
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+.back__container tr .date {
+    
+    width: 225px;
+    text-align: center;
+    
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+.back__container tr .classname {
+    
+    width: 335px;
+    text-align: right;
+
+    box-sizing: border-box;
+    padding-right: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.11);
 
 }
