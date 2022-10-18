@@ -51,3 +51,16 @@
 ![day 3](https://user-images.githubusercontent.com/95046369/196117162-52e3eb0a-222e-469f-a209-22e170dafbcc.gif)
 
 </details>
+
+##### 2022-10-18
+      1. Introduce page 작성 ( ABOUT ME / BACKGROUND )
+      2. 내정보 칸에 마우스 hover시 커서 스크롤 커서로 변경
+<details>
+<summary>Open / Close</summary>
+      
+      
+> INTRODUCE page 완성
+
+![day 4](https://user-images.githubusercontent.com/95046369/196368629-2abe4df9-911f-477b-9141-a25af47a7d43.gif)
+
+</details>
