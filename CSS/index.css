@@ -7,9 +7,13 @@
 
     top: 0;
     left: 0;
+    
+    width: 90vw;
+    height: 90vh;
+
 }
 
-.main__bg {
+/* .main__bg {
     
     background-image: linear-gradient(
         #354649e5,
@@ -18,12 +22,10 @@
     background-size: 200%;
     background-repeat: no-repeat;
 
-    width: 100vw;
-    height: 100vh;
 
     z-index: -1;
 
-}
+} */
 
 /* BEFORE LOAD */
 
@@ -94,7 +96,7 @@
 
     opacity: 100;
 
-    transition: top 2s, left 2s, opacity 2s;
+    transition: top 1s, left 1s, opacity 1s;
 
 }
 
@@ -102,12 +104,14 @@
 
     position: absolute;
 
-    right: -13px;
+    right: -10px;
     margin: auto 0;
 
     font-size: 100px;
     font-weight: 800;
     letter-spacing: 2px;
+
+    font-family: 'Lobster', cursive;
 
     /* 글자색 투명하게 처리 */
     color: transparent;
@@ -124,6 +128,8 @@
 .title2 {
 
     position: absolute;
+
+    font-family: 'Lobster', cursive;
     
     margin: auto;
 
@@ -155,7 +161,7 @@
     width: 1000px;
     height: 400px;
     
-    transition: left 3.5s, opacity 3.5s;
+    transition: left 2s, opacity 2s;
 
 }
 
@@ -165,8 +171,12 @@
     
     top: 0px;
     left: 0px;
+    
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 4px;
 
     font-size: 25px;
+    font-weight: 800;
 
 }
 
@@ -176,5 +186,11 @@
 
     top: 100px;
     left: 0px;
+
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 4px;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
 
 }
