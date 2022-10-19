@@ -75,9 +75,16 @@ projectEl.addEventListener("mouseout", function(){
 
 const inEl = document.querySelector("header .inner");
 
-function hide() {
-    inEl.classList.add("hide");
-}
-function show() {
-    inEl.classList.remove("hide");
+function btn(){
+
+    if (inEl.className.indexOf("hide") == -1) {
+
+        inEl.classList.add("hide");
+
+    } else {
+
+        inEl.classList.remove("hide");
+
+    }
+
 }

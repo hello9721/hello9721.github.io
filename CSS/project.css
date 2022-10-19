@@ -1,0 +1,38 @@
+.p__container {
+
+    position: fixed;
+
+    top: -1px;
+    left: 300px;
+
+    overflow: hidden;
+    border-collapse: collapse;
+
+}
+
+.p__container tr td {
+
+    width: 120px;
+    height: calc((90vh - 240px)/6);
+
+}
+
+.p__container .title td {
+
+    height: 40px;
+
+}
+
+.p__container tr .c__blank { width: 80px; }
+
+.p__container tr .p__toy {
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.p__container tr .p__web {
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
