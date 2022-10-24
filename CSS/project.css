@@ -118,3 +118,9 @@ tr td:hover .preview {
     transition: all 0.7s;
 
 }
+.overwatch:hover .preview {
+
+    background-image: url("../assets/Project/Web/overwatch.gif");
+    background-size: cover;
+
+}
