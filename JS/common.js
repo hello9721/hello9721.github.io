@@ -1,3 +1,21 @@
+// menu hide/show
+
+const inEl = document.querySelector("header .inner");
+
+function btn(){
+
+    if (inEl.className.indexOf("hide") == -1) {
+
+        inEl.classList.add("hide");
+
+    } else {
+
+        inEl.classList.remove("hide");
+
+    }
+
+}
+
 // light 설정
 
 const homeEl = document.querySelector(".home");
@@ -70,21 +88,3 @@ projectEl.addEventListener("mouseout", function(){
 
 });
 
-
-// menu hide/show
-
-const inEl = document.querySelector("header .inner");
-
-function btn(){
-
-    if (inEl.className.indexOf("hide") == -1) {
-
-        inEl.classList.add("hide");
-
-    } else {
-
-        inEl.classList.remove("hide");
-
-    }
-
-}

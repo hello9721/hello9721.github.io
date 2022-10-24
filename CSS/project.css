@@ -1,38 +1,120 @@
+/* TABLE */
+
 .p__container {
 
     position: fixed;
 
     top: -1px;
-    left: 300px;
+    left: 170px;
 
     overflow: hidden;
     border-collapse: collapse;
 
+    overflow: scroll;
+
 }
+
+.p__container::-webkit-scrollbar { display: none; }
 
 .p__container tr td {
 
     width: 120px;
     height: calc((90vh - 240px)/6);
 
-}
-
-.p__container .title td {
-
-    height: 40px;
+    text-align: center;
 
 }
 
-.p__container tr .c__blank { width: 80px; }
+.p__container .title td { height: 40px; }
+.p__container tr .blank { width: 40px; }
 
-.p__container tr .p__toy {
+/* TABLE BACKGROUND */
 
-    background-color: rgba(0, 0, 0, 0.1);
+.p__container tr .p__toy { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .p__web { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .t__toy { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .t__web { background-color: rgba(0, 0, 0, 0.1); }
+/* 
+.p__container tr:first-child td:first-child { border-radius: 10px 10px 0px 0px; }
+.p__container tr:first-child td:last-child { border-radius: 10px 10px 0px 0px; }
+.p__container tr:last-child td:first-child { border-radius: 0px 0px 10px 10px; }
+.p__container tr:last-child td:last-child { border-radius: 0px 0px 10px 10px; } */
+
+/* PROJECT ICON */
+
+.material-icons.md-48 {
+    
+    font-size: 80px;
+    color: #E0E7E9;
+
+    transition: all 0.5s;
 
 }
 
-.p__container tr .p__web {
+tr td:hover .material-icons.md-48 {
 
-    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 100px;
+    color: #A3C6C4;
+
+    transition: all 0.5s;
+
+    cursor: pointer;
+
+}
+
+/* PREVIEW */
+
+.preview {
+
+    position: fixed;
+
+    top: calc((100vh - (966px * 0.7 ))/2);
+    left: 520px;
+
+    width: calc( 1920px * 0.7 );
+    height: calc( 966px * 0.7 );
+    
+    border: solid rgba(0, 0, 0, 0.1) 2px;
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    
+    transition: all 0.5s;
+
+}
+
+tr td:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+/* CALCULATOR */
+
+.calcul .preview {
+
+    background-image: url("../assets/Project/Toy/Calculator.PNG");
+    background-size: cover;
+
+}
+
+/* OVERWATCH */
+
+.overwatch img{
+    
+    transform: scale(0.8);
+
+    transition: all 0.5s;
+}
+.overwatch:hover img {
+
+    transform: scale(1);
+
+    transition: all 0.7s;
 
 }
