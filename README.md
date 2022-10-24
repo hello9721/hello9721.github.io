@@ -64,3 +64,16 @@
 ![day 4](https://user-images.githubusercontent.com/95046369/196368629-2abe4df9-911f-477b-9141-a25af47a7d43.gif)
 
 </details>
+
+##### 2022-10-24
+      1. Project page 작성 ( toyproject / project )
+      2. 아이콘에 hover 시 미리보기 화면을 오른쪽에 표시
+<details>
+<summary>Open / Close</summary>
+      
+      
+> Project page 작성
+
+![day 4](https://user-images.githubusercontent.com/95046369/196368629-2abe4df9-911f-477b-9141-a25af47a7d43.gif)
+
+</details>
