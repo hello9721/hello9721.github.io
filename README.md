@@ -65,7 +65,7 @@
 
 </details>
 
-##### 2022-10-24
+##### 2022-10-24 - 2022-10-25
       1. Project page 작성 ( toyproject / project )
       2. 아이콘에 hover 시 미리보기 화면을 오른쪽에 표시
 <details>
@@ -74,6 +74,6 @@
       
 > Project page 작성
 
-![day 4](https://user-images.githubusercontent.com/95046369/196368629-2abe4df9-911f-477b-9141-a25af47a7d43.gif)
+![Day 5](https://user-images.githubusercontent.com/95046369/197720605-7eeec289-7a6b-4a62-a5b0-0b0a7f7683a9.gif)
 
 </details>
