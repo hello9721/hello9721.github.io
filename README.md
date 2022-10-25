@@ -74,6 +74,6 @@
       
 > Project page 작성
       
-![Day 5](https://user-images.githubusercontent.com/95046369/197721058-780f8bdc-e94c-49a4-a685-bac8ad7b02d2.gif)
+![Day 5](https://user-images.githubusercontent.com/95046369/197721375-7babef49-0158-40c9-96ef-da7d09b68876.gif)
 
 </details>
