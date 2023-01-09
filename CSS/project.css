@@ -58,16 +58,17 @@ tr .p__toy:hover .material-icons.md-48 {
 }
 
 /* PREVIEW */
+/* 1270 x 960 */
 
 .preview {
 
     position: fixed;
 
-    top: calc((100vh - (966px * 0.7 ))/2);
-    left: 520px;
+    top: calc((100vh - (960px * 0.7 ))/2);
+    right: 100px;
 
-    width: calc( 1920px * 0.7 );
-    height: calc( 966px * 0.7 );
+    width: calc( 1270px * 0.7 );
+    height: calc( 960px * 0.7 );
     
     border: solid rgba(0, 0, 0, 0.1) 2px;
     border-radius: 10px;
@@ -75,12 +76,50 @@ tr .p__toy:hover .material-icons.md-48 {
     opacity: 0;
     visibility: hidden;
 
-    
     transition: all 0.5s;
 
 }
 
 tr td:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+.preview_txt {
+
+    position: fixed;
+
+    top: calc((100vh - 600px)/2);
+    right: calc(( 1270px * 0.7 ) + 100px);
+
+    width: 400px;
+    height: calc( 960px * 0.7 );
+
+    text-align: left;
+    font-weight: 700;
+
+    color: #A3C6C4;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.preview_txt_title { font-size: 50px; }
+.preview_txt_desc {
+    
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+tr td:hover .preview_txt {
 
     opacity: 100;
     visibility: visible;
