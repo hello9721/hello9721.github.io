@@ -16,7 +16,7 @@
 
 .p__container::-webkit-scrollbar { display: none; }
 
-.p__container tr td {
+.p__container tr .p__name {
 
     width: 120px;
     height: calc((90vh - 240px)/6);
@@ -25,19 +25,24 @@
 
 }
 
+.p__container tr .p__desc {
+
+    width: calc(100vw - 500px);
+    height: calc((90vh - 240px)/6);
+
+}
+
 .p__container tr .blank { width: 40px; }
 .p__container .title td { height: 20px; }
 
 /* TABLE BACKGROUND */
 
-.p__container tr .p__toy { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .p__web { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .t__toy { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .t__web { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .p__name { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .p__desc { background-color: rgba(0, 0, 0, 0.1); }
 
 /* PROJECT ICON */
 
-.p__toy .material-icons.md-48 {
+.p__name .material-icons.md-48 {
     
     font-size: 80px;
     color: #E0E7E9;
@@ -46,7 +51,7 @@
 
 }
 
-tr .p__toy:hover .material-icons.md-48 {
+tr .p__name:hover .material-icons.md-48 {
 
     font-size: 100px;
     color: #A3C6C4;
@@ -65,7 +70,7 @@ tr .p__toy:hover .material-icons.md-48 {
     position: fixed;
 
     top: calc((100vh - (960px * 0.7 ))/2);
-    right: 100px;
+    left: 800px;
 
     width: calc( 1270px * 0.7 );
     height: calc( 960px * 0.7 );
@@ -94,7 +99,7 @@ tr td:hover .preview {
     position: fixed;
 
     top: calc((100vh - 600px)/2);
-    right: calc(( 1270px * 0.7 ) + 100px);
+    left: 400px;
 
     width: 400px;
     height: calc( 960px * 0.7 );
@@ -102,7 +107,7 @@ tr td:hover .preview {
     text-align: left;
     font-weight: 700;
 
-    color: #A3C6C4;
+    color: #ffffffaf;
 
     opacity: 0;
     visibility: hidden;
@@ -111,7 +116,7 @@ tr td:hover .preview {
 
 }
 
-.preview_txt_title { font-size: 50px; }
+.preview_txt_title { font-size: 40px; }
 .preview_txt_desc {
     
     font-size: 20px;
@@ -134,6 +139,19 @@ tr td:hover .preview_txt {
 
     background-image: url("../assets/Project/Toy/Calculator.PNG");
     background-size: cover;
+
+}
+.calcul img{
+    
+    transform: scale(0.8);
+
+    transition: all 0.5s;
+}
+.calcul:hover img {
+
+    transform: scale(1);
+
+    transition: all 0.7s;
 
 }
 
