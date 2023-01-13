@@ -77,3 +77,27 @@
 ![Day 5](https://user-images.githubusercontent.com/95046369/197721375-7babef49-0158-40c9-96ef-da7d09b68876.gif)
 
 </details>
+
+##### 2023-01-12
+      1. Project page 레이아웃 변경
+<details>
+<summary>Open / Close</summary>
+      
+      
+> Project page 레이아웃 변경
+
+![Day 6](https://user-images.githubusercontent.com/95046369/212227798-eea2af13-c309-4ae7-8316-b1a6d57d0301.gif)
+
+</details>
+
+##### 2023-01-12
+      1. Skill Page 작성
+<details>
+<summary>Open / Close</summary>
+      
+      
+> Skill page 작성
+      
+![Day 7](https://user-images.githubusercontent.com/95046369/212228098-6d140d9d-6e73-4ee0-9576-dda3023957d0.gif)
+
+</details>
