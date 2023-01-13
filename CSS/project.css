@@ -62,6 +62,22 @@ tr .p__name:hover .material-icons.md-48 {
 
 }
 
+.p__name img{
+    
+    transform: scale(0.8);
+
+    transition: all 0.5s;
+}
+.p__name:hover img {
+
+    transform: scale(1);
+
+    transition: all 0.7s;
+
+    cursor: pointer;
+
+}
+
 /* PREVIEW */
 /* 1270 x 960 */
 
@@ -137,42 +153,16 @@ tr td:hover .preview_txt {
 
 .calcul .preview {
 
-    background-image: url("../assets/Project/Toy/Calculator.PNG");
+    background-image: url("../assets/Project/Calculator.PNG");
     background-size: cover;
-
-}
-.calcul img{
-    
-    transform: scale(0.8);
-
-    transition: all 0.5s;
-}
-.calcul:hover img {
-
-    transform: scale(1);
-
-    transition: all 0.7s;
 
 }
 
 /* OVERWATCH */
 
-.overwatch img{
-    
-    transform: scale(0.8);
-
-    transition: all 0.5s;
-}
-.overwatch:hover img {
-
-    transform: scale(1);
-
-    transition: all 0.7s;
-
-}
 .overwatch .preview {
 
-    background-image: url("../assets/Project/Web/overwatch.gif");
+    background-image: url("../assets/Project/overwatch.gif");
     background-size: cover;
 
     opacity: 0;
@@ -183,6 +173,56 @@ tr td:hover .preview_txt {
 }
 
 .overwatch:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+/* CHAMPION SELECTOR */
+
+.champion_selector .preview {
+
+    background-image: url("../assets/Project/champion_selector.gif");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.champion_selector:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+/* OUR TOWN WEATHER */
+
+.our_town_weather .preview {
+
+    background-image: url("../assets/Project/our_town_weather.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.our_town_weather:hover .preview {
 
     opacity: 100;
     visibility: visible;
