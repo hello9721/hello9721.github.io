@@ -1,0 +1,109 @@
+.stack {
+
+    position: absolute;
+
+    top: 170px;
+    left: 200px;
+
+    overflow: hidden;
+    border-collapse: collapse;
+
+    overflow: scroll;
+
+    table-layout:fixed; 
+
+}
+
+.title {
+
+    color: #E0E7E9;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 50px;
+
+}
+
+.content {
+    
+    background-color: rgba(0, 0, 0, 0.171);
+
+    height: 90px;
+
+}
+.content td {
+
+    box-sizing: border-box;
+
+    width: 70px;
+    padding: 20px 10px 20px 10px;
+
+}
+.content .first {
+    
+    border-radius: 10px 0 0 10px;
+    width: 20px;
+
+}
+.content .last {
+    
+    border-radius: 0 10px 10px 0;
+    width: 20px;
+
+}
+
+.blank { height: 20px; }
+.blank:last-child { height: 200px; }
+
+
+svg {
+
+    width: 50px;
+    height: 50px;
+
+    transition: transform 0.3s;
+
+}
+
+svg:hover {
+
+    transform: scale(1.2);
+
+    transition: transform 0.3s;
+
+}
+
+/* LANGUAGE */
+
+.R svg { fill: #276dc3; }
+.python svg { fill: #3776AB ; }
+.c-sharp svg { fill: #239120; }
+.javascript svg { fill: #F7DF1E; }
+
+/* FRONTEND */
+
+.html svg { fill: #E34F26; }
+.css svg { fill: #1572B6; }
+.bootstrap svg { fill: #7952B3; }
+
+/* BACKEND */
+
+.django svg { fill: #2d7057; }
+
+/* DATABASE */
+
+.sqlite svg { fill: #296c8b; }
+.mariadb svg { fill: #0e5064; }
+
+/* DATA */
+
+.tensorflow svg { fill: #FF6F00; }
+
+/* DevOps */
+
+.github svg { fill: #5a5858; }
+.pages svg { fill: #5a5858;}
+
+/* TOOL */
+
+.slack svg { fill: #4A154B; }

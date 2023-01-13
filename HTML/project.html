@@ -139,64 +139,133 @@
 
     <table class="p__container">
         <tr>
-            <td class="p__toy calcul" onclick="window.open('../Project/Toy/Calculator/Calculator.html')">
+            <td class="p__name calcul" onclick="window.open('../Project/Toy/Calculator/Calculator.html')">
                 <span class="material-icons md-48">calculate</span>
-                <div class="preview"></div>
+                <div class="preview_txt">
+                    <p class="preview_txt_title">
+                        JS 계산기
+                    </p>
+                    <p class="preview_txt_desc">
+                        개발 기간 : 22/09/20 ~ 22/09/23 <br>
+                        개발 인원 : 1인 <br>
+                        개발자 : 이하나 <br>
+                    </p>
+                    <div class="preview_txt_lang">
+                        <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=HTML5&logoColor=E34F26&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/CSS3-1572B6.svg?logo=CSS3&logoColor=1572B6&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&logoColor=F7DF1E&color=607275&style=flat" />
+                    </div>
+                </div>
+                <div class="preview"></div> 
             </td>
             <td class="blank"></td>
-            <td class="p__web overwatch" onclick="window.open('/overwatch_selector/')">
+            <td class="p__desc"> </td>    
+        </tr>
+
+        <tr>
+            <td class="p__name overwatch" onclick="window.open('/overwatch_selector/')">
                 <!-- <a href="https://icons8.com/icon/63667/overwatch">Overwatch icon by Icons8</a> -->
                 <img src="data:image/png;base64,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">
+                <div class="preview_txt">
+                    <p class="preview_txt_title">
+                        Overwatch <br> Selector
+                    </p>
+                    <p class="preview_txt_desc">
+                        개발 기간 : 22/01/28 ~ 22/02/18 <br>
+                        개발 인원 : 1인 <br>
+                        개발자 : 이하나 <br>
+                    </p>
+                    <div class="preview_txt_lang">
+                        <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=HTML5&logoColor=E34F26&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/CSS3-1572B6.svg?logo=CSS3&logoColor=1572B6&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&logoColor=F7DF1E&color=607275&style=flat" />
+                    </div>
+                </div>
                 <div class="preview"></div>
             </td>
-        </tr>
-
-        <tr>
-            <td class="p__toy"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
         
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name champion_selector" onclick="window.open('https://github.com/hello9721/Python_practice/tree/main/MISSION%202')">
+                <!-- <a href="https://icons8.com/icon/31595/league-of-legends">League of Legends icon by Icons8</a> -->
+                <img src="data:image/png;base64,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">
+                <div class="preview_txt">
+                    <p class="preview_txt_title">
+                        Champion<br>Selector
+                    </p>
+                    <p class="preview_txt_desc">
+                        개발 기간 : 22/11/07 ~ 22/11/10 <br>
+                        개발 인원 : 3인 <br>
+                        개발자 : 이하나, 박종인, 오창민 <br>
+                    </p>
+                    <div class="preview_txt_lang">
+                        <img src="https://img.shields.io/badge/Python-3776AB.svg?logo=Python&logoColor=3776AB&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/Qt-41CD52.svg?logo=Qt&logoColor=41CD52&color=607275&style=flat" />
+                    </div>
+                </div>
+                <div class="preview"></div>
+            </td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
         
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name our_town_weather" onclick="window.open('http://hello9721.pythonanywhere.com/')">
+                <div class="material-icons md-48">light_mode</div>
+                <div class="preview_txt">
+                    <p class="preview_txt_title">
+                        Our Town<br>Weather
+                    </p>
+                    <p class="preview_txt_desc">
+                        개발 기간 : 22/12/12 ~ 22/12/21<br>
+                        개발 인원 : 5인 <br>
+                        개발자 :<br> 
+                        이하나, 오병규, 이희문, 주재영, 최연웅<br>
+                    </p>
+                    <div class="preview_txt_lang">
+                        <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=HTML5&logoColor=E34F26&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/CSS3-1572B6.svg?logo=CSS3&logoColor=1572B6&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&logoColor=F7DF1E&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/Python-3776AB.svg?logo=Python&logoColor=3776AB&color=607275&style=flat" />
+                        <img src="https://img.shields.io/badge/Django-092E20.svg?logo=Django&logoColor=092E20&color=607275&style=flat" />
+                    </div>
+                </div>
+                <div class="preview"></div>
+            </td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
         
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
         
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
 
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
 
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
 
         <tr>
-            <td class="p__toy"></td>
+            <td class="p__name"></td>
             <td class="blank"></td>
-            <td class="p__web"></td>
+            <td class="p__desc"></td>
         </tr>
         
     </table>

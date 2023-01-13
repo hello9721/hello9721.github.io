@@ -16,7 +16,7 @@
 
 .p__container::-webkit-scrollbar { display: none; }
 
-.p__container tr td {
+.p__container tr .p__name {
 
     width: 120px;
     height: calc((90vh - 240px)/6);
@@ -25,19 +25,24 @@
 
 }
 
+.p__container tr .p__desc {
+
+    width: calc(100vw - 500px);
+    height: calc((90vh - 240px)/6);
+
+}
+
 .p__container tr .blank { width: 40px; }
 .p__container .title td { height: 20px; }
 
 /* TABLE BACKGROUND */
 
-.p__container tr .p__toy { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .p__web { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .t__toy { background-color: rgba(0, 0, 0, 0.1); }
-.p__container tr .t__web { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .p__name { background-color: rgba(0, 0, 0, 0.1); }
+.p__container tr .p__desc { background-color: rgba(0, 0, 0, 0.1); }
 
 /* PROJECT ICON */
 
-.p__toy .material-icons.md-48 {
+.p__name .material-icons.md-48 {
     
     font-size: 80px;
     color: #E0E7E9;
@@ -46,7 +51,7 @@
 
 }
 
-tr .p__toy:hover .material-icons.md-48 {
+tr .p__name:hover .material-icons.md-48 {
 
     font-size: 100px;
     color: #A3C6C4;
@@ -57,17 +62,34 @@ tr .p__toy:hover .material-icons.md-48 {
 
 }
 
+.p__name img{
+    
+    transform: scale(0.8);
+
+    transition: all 0.5s;
+}
+.p__name:hover img {
+
+    transform: scale(1);
+
+    transition: all 0.7s;
+
+    cursor: pointer;
+
+}
+
 /* PREVIEW */
+/* 1270 x 960 */
 
 .preview {
 
     position: fixed;
 
-    top: calc((100vh - (966px * 0.7 ))/2);
-    left: 520px;
+    top: calc((100vh - (960px * 0.7 ))/2);
+    left: 800px;
 
-    width: calc( 1920px * 0.7 );
-    height: calc( 966px * 0.7 );
+    width: calc( 1270px * 0.7 );
+    height: calc( 960px * 0.7 );
     
     border: solid rgba(0, 0, 0, 0.1) 2px;
     border-radius: 10px;
@@ -75,7 +97,6 @@ tr .p__toy:hover .material-icons.md-48 {
     opacity: 0;
     visibility: hidden;
 
-    
     transition: all 0.5s;
 
 }
@@ -89,33 +110,59 @@ tr td:hover .preview {
 
 }
 
+.preview_txt {
+
+    position: fixed;
+
+    top: calc((100vh - 600px)/2);
+    left: 400px;
+
+    width: 400px;
+    height: calc( 960px * 0.7 );
+
+    text-align: left;
+    font-weight: 700;
+
+    color: #ffffffaf;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.preview_txt_title { font-size: 40px; }
+.preview_txt_desc {
+    
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+tr td:hover .preview_txt {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
 /* CALCULATOR */
 
 .calcul .preview {
 
-    background-image: url("../assets/Project/Toy/Calculator.PNG");
+    background-image: url("../assets/Project/Calculator.PNG");
     background-size: cover;
 
 }
 
 /* OVERWATCH */
 
-.overwatch img{
-    
-    transform: scale(0.8);
-
-    transition: all 0.5s;
-}
-.overwatch:hover img {
-
-    transform: scale(1);
-
-    transition: all 0.7s;
-
-}
 .overwatch .preview {
 
-    background-image: url("../assets/Project/Web/overwatch.gif");
+    background-image: url("../assets/Project/overwatch.gif");
     background-size: cover;
 
     opacity: 0;
@@ -126,6 +173,56 @@ tr td:hover .preview {
 }
 
 .overwatch:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+/* CHAMPION SELECTOR */
+
+.champion_selector .preview {
+
+    background-image: url("../assets/Project/champion_selector.gif");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.champion_selector:hover .preview {
+
+    opacity: 100;
+    visibility: visible;
+
+    transition: all 0.7s;
+
+}
+
+/* OUR TOWN WEATHER */
+
+.our_town_weather .preview {
+
+    background-image: url("../assets/Project/our_town_weather.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+}
+
+.our_town_weather:hover .preview {
 
     opacity: 100;
     visibility: visible;
