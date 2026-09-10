@@ -1,178 +1,606 @@
 <!DOCTYPE html>
-<html lang="kr">
-
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P O R T F O L I O</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이하나 — 사용자 중심의 심플함을 추구하는 개발자 포트폴리오">
+  <title>HANA LEE — Portfolio</title>
 
-    <link rel="stylesheet" href="./CSS/common.css">
-    <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='./CSS/common.cs') }}">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script defer src="./JS/common.js"></script>
-    <script defer src="./JS/index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
 </head>
-
 <body>
-    <!-- HEADER & MENU -->
-    <header>
-        <div class="inner">
-            
-            <table class="menu">
-                <tr class="home" onclick="getVal('home')">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        <a href="/">
-                            <span class="material-icons md-48">
-                                other_houses
-                            </span>
-                            <span class="menu__txt">
-                                <br>
-                                home
-                                <br>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="intro" onclick="getVal('intro')">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        <a href="./HTML/intro.html">
-                            <span class="material-icons md-48">
-                                badge
-                            </span>
-                            <span class="menu__txt">
-                                <br>
-                                profile
-                                <br>
-                            </span>
-                        </a>
-                    </td>                    
-                </tr>
-                <tr class="skill" onclick="getVal('skill')">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        <a href="./HTML/skill.html">
-                            <span class="material-icons md-48">
-                                layers
-                            </span>
-                            <span class="menu__txt">
-                                <br>
-                                skills
-                                <br>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="project" onclick="getVal('project')">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        <a href="./HTML/project.html">
-                            <span class="material-icons md-48">
-                                local_movies
-                            </span>
-                            <span class="menu__txt">
-                                <br>
-                                projects
-                                <br>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-            </table>
-            
-            <table class="light">
-                <tr class="home active select">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        ●
-                    </td>
-                </tr>
-                <tr class="intro active">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        ●
-                    </td>
-                </tr>
-                <tr class="skill active">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        ●
-                    </td>
-                </tr>
-                <tr class="project active">
-                    <td class="menu__blank"></td>
-                    <td class="menu__content">
-                        ●
-                    </td>
-                </tr>
-            </table>
-            
-            <table class="btn" onclick="btn()">
-                <tr>
-                    <td class="btn__hide btn__area">
-                        <span class="material-symbols-outlined">
-                            arrow_back_ios
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="btn__show btn__area">
-                        <span class="material-symbols-outlined">
-                            arrow_forward_ios
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="btn__showText">
-                        <div>
-                            MENU
-                        </div> 
-                    </td>
-                </tr>
-            </table>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 
-        </div>
-    </header>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="./index.html#top" aria-label="Hana Lee home">
+        <span class="logo-mark">HL</span>
+        <span class="logo-text">Hana Lee</span>
+      </a>
 
-    <!-- HOMEPAGE -->
-    <div class="main load">
-        
-        <div class="main__title1">
-            <div class="title1"> Hello, </div>
-        </div>
-        <div class="main__title2">
-            <div class="title2"> World! </div>
-        </div>
-        
-        <div class="main__content">
-            <div class="subtitle">
-                저의 첫 포트폴리오 사이트에 오신 것을 환영합니다!
-            </div>
-            <div class="desc">
-                안녕하세요! 항상 <span class="highlight1">어제보다 더 나아가는 개발자 이하나</span> 입니다. <br><br>
-                여러 길고 짧은 프로그래밍 학습 과정들을 통해 프로그래밍에 대한 기초를 단단히 다지고, <br>
-                이제는 활용하고 응용하며 역량을 키워나가는 중 입니다. <br><br>
-                제가 느끼는 좋은 프로그램은 겉의 화려함보다 <br>
-                <span class="highlight1">사용자들이 보기 편하고 사용하기 편한 심플함</span>을 가진 프로그램입니다. <br><br>
-                신입이기에 경력보다 경험은 부족하다는 것을 인정합니다. <br>
-                하지만 신입이기에 <span class="highlight1">아직 스러지지 않은 열정</span>을 가지고 있습니다. <br><br>
-                잘 부탁드립니다.
-            </div>
-        </div>
-        
-        <div class="main__bg"></div>
+      <nav class="nav" id="nav" aria-label="주요 메뉴">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+        <span></span><span></span>
+      </button>
     </div>
-</body>
+  </header>
 
+  <main id="main" class="page-snap">
+    <div class="snap-panel" id="top">
+      <div class="snap-panel__scroll">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-layout">
+        <div class="hero-content">
+          <p class="hero-brand reveal" data-reveal>HANA LEE</p>
+          <h1 class="hero-title reveal" data-reveal>
+            어제보다 한 걸음 더<br>나아가는 개발자
+          </h1>
+          <p class="hero-lead reveal" data-reveal>
+            화려한 겉모습보다, 보고 쓰기 편한 심플함을 만듭니다.
+          </p>
+          <div class="hero-actions reveal" data-reveal>
+            <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+            <a class="btn btn-ghost" href="#contact">연락하기</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait reveal" data-reveal>
+          <span class="hero-portrait-glow" aria-hidden="true"></span>
+          <figure class="hero-portrait-frame">
+            <img
+              src="./assets/profile.jpg"
+              alt="이하나 프로필 사진"
+              class="hero-photo"
+              width="640"
+              height="800"
+              fetchpriority="high"
+            >
+          </figure>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="소개로 스크롤">
+        <span class="scroll-cue-line"></span>
+      </a>
+    </section>
+      </div>
+    </div>
+
+    <div class="snap-panel" id="about">
+      <div class="snap-panel__scroll">
+    <section class="section about">
+      <div class="section-inner">
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2>소개</h2>
+          <p class="section-desc">기초를 단단히 다지고, 활용과 응용으로 역량을 키워가는 중입니다.</p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal" data-reveal>
+            <p>
+              안녕하세요. <strong>이하나</strong>입니다.
+              여러 학습 과정을 거쳐 프로그래밍 기초를 쌓았고,
+              이제는 실제 서비스에 응용하며 성장하고 있습니다.
+            </p>
+            <p>
+              제가 생각하는 좋은 프로그램은 겉의 화려함보다
+              <em>사용자가 보기 편하고 사용하기 쉬운 심플함</em>을 가진 것입니다.
+            </p>
+            <p>
+              아직 부족할 수 있습니다.
+              하지만 그만큼 <em>식지 않은 열정</em>으로 배워가겠습니다.
+            </p>
+          </div>
+
+          <dl class="about-meta reveal" data-reveal>
+            <div>
+              <dt>Name</dt>
+              <dd>이하나</dd>
+            </div>
+            <div>
+              <dt>Birth</dt>
+              <dd>1997.12.20</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>충북 청주시 흥덕구</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:hanya97@kakao.com">hanya97@kakao.com</a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="timeline reveal" data-reveal>
+          <h3 class="timeline-title">Background</h3>
+          <ol class="timeline-list">
+            <li>
+              <span class="timeline-period">2024.12 — 현재</span>
+              <span class="timeline-place">주식회사 명진솔루션</span>
+              <span class="timeline-role">웹/앱 개발 및 서비스 기획</span>
+            </li>
+            <li>
+              <span class="timeline-period">2023.02 — 2024.11</span>
+              <span class="timeline-place">주식회사 도넛소프트</span>
+              <span class="timeline-role">웹/앱 개발 및 서비스 기획</span>
+            </li>
+            <li>
+              <span class="timeline-period">2022.08 — 2023.02</span>
+              <span class="timeline-place">한국아이티전문학원</span>
+              <span class="timeline-role">S/W 개발 및 빅데이터응용 과정</span>
+            </li>
+            <li>
+              <span class="timeline-period">2021.10 — 2021.11</span>
+              <span class="timeline-place">스파르타 코딩클럽</span>
+              <span class="timeline-role">앱개발 종합반</span>
+            </li>
+            <li>
+              <span class="timeline-period">2021.07 — 2021.08</span>
+              <span class="timeline-place">스파르타 코딩클럽</span>
+              <span class="timeline-role">웹개발 종합반</span>
+            </li>
+            <li>
+              <span class="timeline-period">2016.03 — 2020.08</span>
+              <span class="timeline-place">한양사이버대학교</span>
+              <span class="timeline-role">상담심리학과 / 사회복지서비스과</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+
+    <div class="snap-panel" id="skills">
+      <div class="snap-panel__scroll">
+    <section class="section skills">
+      <div class="section-inner">
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow">Skills</p>
+          <h2>기술 스택</h2>
+          <p class="section-desc">주력은 React · NestJS이며, 웹·앱 전반을 다루고 있습니다.</p>
+        </header>
+
+        <div class="skill-groups">
+          <article class="skill-group reveal" data-reveal>
+            <h3>Language</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>Kotlin</li>
+              <li>PHP</li>
+              <li>C#</li>
+              <li>R</li>
+              <li>Node.js</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal" data-reveal>
+            <h3>Frontend</h3>
+            <ul>
+              <li>React</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>jQuery</li>
+              <li>Vite</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal" data-reveal>
+            <h3>Backend</h3>
+            <ul>
+              <li>NestJS</li>
+              <li>Django</li>
+              <li>Node.js</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal" data-reveal>
+            <h3>Database</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>MariaDB</li>
+              <li>SQLite</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal" data-reveal>
+            <h3>Tools</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Slack</li>
+              <li>Android Studio</li>
+              <li>Cursor</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+
+    <div class="snap-panel" id="projects">
+      <div class="snap-panel__scroll">
+    <section class="section projects">
+      <div class="section-inner">
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow">Projects</p>
+          <h2>프로젝트</h2>
+          <p class="section-desc">실무 Main 프로젝트와 학습·흥미·실험용 Toy 프로젝트입니다.</p>
+        </header>
+
+        <div class="project-group reveal" data-reveal>
+          <header class="project-group-head">
+            <h3>Main</h3>
+            <p>업무·서비스 중심의 주요 프로젝트</p>
+          </header>
+          <div class="project-list" id="projects-main">
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://play.google.com/store/apps/details?id=com.donutsoft.careservice" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/careservice.png" alt="365케어서비스 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2023.06 — 08 · 기획 / 퍼블리싱 / 개발 (서브)</p>
+                  <h3>365케어서비스</h3>
+                  <p>카페를 주고객으로 하는 카페 설비 케어 서비스 (월정액 구독 서비스 &amp; A/S)</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                    <li>Kotlin</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://play.google.com/store/apps/details?id=com.donutsoft.caredriver" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/caredriver.png" alt="365케어기사 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2023.06 — 08 · 기획 / 퍼블리싱 / 개발 (서브)</p>
+                  <h3>365케어기사</h3>
+                  <p>365케어서비스 고객을 대상으로 하는 기사님 전용 서비스</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                    <li>Kotlin</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://isuip.donutsoft.co.kr/main.php" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/isu_market.png" alt="ISU MARKET 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2023.09 — 11 · 기획 / 개발 / 퍼블리싱</p>
+                  <h3>ISU MARKET</h3>
+                  <p>특허 거래를 목적으로 하는 웹 기반 플랫폼</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://play.google.com/store/apps/details?id=dn.moya.realker" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual project-visual--logo">
+                  <img src="./assets/Project/realker.png" alt="REALKER 로고" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2024.01 — 05 · 퍼블리싱 / 개발</p>
+                  <h3>REALKER</h3>
+                  <p>고객 관리 및 콜백 메시지 플랫폼</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                    <li>Kotlin</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://play.google.com/store/apps/details?id=com.donutsoft.jb" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual project-visual--logo">
+                  <img src="./assets/Project/jb.png" alt="장비와 인력 로고" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2024.04 — 07 · 퍼블리싱 / 개발</p>
+                  <h3>장비와 인력</h3>
+                  <p>생활/건설인력 및 중장비, 이사 공동중계 플랫폼</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                    <li>Kotlin</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <div class="project-link">
+                <div class="project-visual project-visual--logo">
+                  <img src="./assets/Project/ilovekorea.png" alt="I Love Korea 로고" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2024.08 — 진행중 · 기획 (서브) / 퍼블리싱 / 개발</p>
+                  <h3>I Love Korea</h3>
+                  <p>국내 거주 외국인 대상 언어 학습 및 커뮤니티 플랫폼</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Smarty</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <div class="project-link">
+                <div class="project-visual project-visual--logo">
+                  <img src="./assets/Project/worldeasy.png" alt="World Easy 로고" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2025.12 — 진행중 · 기획 (서브) / 퍼블리싱 / 개발</p>
+                  <h3>World Easy</h3>
+                  <p>외국인 근로자·유학생 업무 관리 다국어 멀티테넌트 SaaS</p>
+                  <ul class="tags">
+                    <li>TypeScript</li>
+                    <li>NestJS</li>
+                    <li>TypeORM</li>
+                    <li>PostgreSQL</li>
+                    <li>React</li>
+                    <li>Vite</li>
+                    <li>Tailwind CSS</li>
+                    <li>Nginx</li>
+                    <li>pnpm</li>
+                    <li>Socket.IO</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-group reveal" data-reveal>
+          <header class="project-group-head">
+            <h3>Toy</h3>
+            <p>학습과 흥미·실험을 위해 만든 프로젝트</p>
+          </header>
+          <div class="project-list" id="projects-toy">
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="./Project/Toy/Calculator/Calculator.html" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/Calculator.png" alt="JS 계산기 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2022.09 · Solo</p>
+                  <h3>JS Calculator</h3>
+                  <p>순수 JavaScript로 구현한 계산기 토이 프로젝트</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="./overwatch_selector/" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/overwatch.gif" alt="Overwatch Selector 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2022.01 — 02 · Solo</p>
+                  <h3>Overwatch Selector</h3>
+                  <p>오버워치 영웅 선택 도우미 웹 앱</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="https://github.com/hello9721/Python_practice/tree/main/MISSION%202" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/champion_selector.gif" alt="Champion Selector 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2022.11 · Team of 3</p>
+                  <h3>Champion Selector</h3>
+                  <p>리그 오브 레전드 챔피언 선택 도우미 · Python / Qt</p>
+                  <ul class="tags">
+                    <li>Python</li>
+                    <li>Qt</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <a class="project-link" href="http://hello9721.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
+                <div class="project-visual">
+                  <img src="./assets/Project/our_town_weather.gif" alt="Our Town Weather 미리보기" loading="lazy" width="800" height="500">
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2022.12 · Team of 5</p>
+                  <h3>Our Town Weather</h3>
+                  <p>지역 날씨 정보를 보여주는 Django 웹 서비스</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Django</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <div class="project-link">
+                <div
+                  class="project-visual project-visual--swap"
+                  data-media-swap
+                  data-logo-ms="2000"
+                  data-gif-ms="12000"
+                  aria-hidden="true"
+                >
+                  <img
+                    class="swap-logo is-active"
+                    src="./assets/Project/positive_diary.jpg"
+                    alt=""
+                    loading="lazy"
+                    width="800"
+                    height="500"
+                  >
+                  <img
+                    class="swap-gif"
+                    src="./assets/Project/positive_diary.gif"
+                    alt=""
+                    loading="lazy"
+                    width="800"
+                    height="500"
+                  >
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2026.07 — 08 · 기획 / 퍼블리싱 / 개발</p>
+                  <h3>긍정일기</h3>
+                  <p>하루의 긍정적인 순간과 행동을 기록하고, 나의 변화를 한눈에 확인하는 긍정 기록 앱</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Vite</li>
+                    <li>Tailwind CSS</li>
+                    <li>React Router</li>
+                    <li>Kotlin</li>
+                    <li>Supabase</li>
+                    <li>Netlify</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal" data-reveal>
+              <div class="project-link">
+                <div
+                  class="project-visual project-visual--swap"
+                  data-media-swap
+                  data-logo-ms="2000"
+                  data-gif-ms="31000"
+                  aria-hidden="true"
+                >
+                  <img
+                    class="swap-logo is-active"
+                    src="./assets/Project/color_hunting.png"
+                    alt=""
+                    loading="lazy"
+                    width="800"
+                    height="500"
+                  >
+                  <img
+                    class="swap-gif"
+                    src="./assets/Project/color_hunting.gif"
+                    alt=""
+                    loading="lazy"
+                    width="800"
+                    height="500"
+                  >
+                </div>
+                <div class="project-body">
+                  <p class="project-meta">2026.09 · 기획 / 퍼블리싱 / 개발</p>
+                  <h3>Color Hunting</h3>
+                  <p>오늘의 색을 찾아 찍고 사진을 모으는 플랫폼</p>
+                  <ul class="tags">
+                    <li>HTML5</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Vite</li>
+                    <li>Tailwind CSS</li>
+                    <li>React Router</li>
+                    <li>Kotlin</li>
+                    <li>Supabase</li>
+                    <li>Netlify</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+
+    <div class="snap-panel" id="contact">
+      <div class="snap-panel__scroll">
+    <section class="section contact">
+      <div class="section-inner contact-inner reveal" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2>함께 이야기해요</h2>
+        <p class="contact-lead">새로운 기회와 협업을 환영합니다. 편하게 연락해 주세요.</p>
+        <a class="btn btn-primary" href="mailto:hanya97@kakao.com">hanya97@kakao.com</a>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Hana Lee</p>
+      <div class="footer-links">
+        <a href="./hobby.html">Hobby</a>
+        <a href="https://github.com/hello9721" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+      </div>
+    </div>
+  </main>
+
+  <script src="./JS/main.js" defer></script>
+</body>
 </html>
