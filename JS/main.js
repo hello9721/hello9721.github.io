@@ -6,49 +6,25 @@
   const pageSnap = document.querySelector(".page-snap");
   const panels = Array.from(document.querySelectorAll(".snap-panel"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isMobileSnap = () => window.matchMedia("(max-width: 900px)").matches;
+  const mobileMq = window.matchMedia("(max-width: 900px)");
+  const isMobileLayout = () => mobileMq.matches;
+  const scrollRoot = () => (isMobileLayout() || !pageSnap ? window : pageSnap);
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
 
-  /* Keep snap height aligned with the visible viewport (mobile URL bar) */
-  const syncAppHeight = () => {
-    if (!isMobileSnap()) {
-      document.documentElement.style.removeProperty("--app-height");
-      if (pageSnap) {
-        pageSnap.style.top = "";
-        pageSnap.style.height = "";
-      }
-      return;
-    }
-
-    const vv = window.visualViewport;
-    const height = Math.round(vv?.height || window.innerHeight);
-    const top = Math.round(vv?.offsetTop || 0);
-
-    document.documentElement.style.setProperty("--app-height", `${height}px`);
-
-    if (pageSnap) {
-      pageSnap.style.top = `${top}px`;
-      pageSnap.style.height = `${height}px`;
-    }
-  };
-
-  syncAppHeight();
-  window.addEventListener("resize", syncAppHeight, { passive: true });
-  window.visualViewport?.addEventListener("resize", syncAppHeight, { passive: true });
-  window.visualViewport?.addEventListener("scroll", syncAppHeight, { passive: true });
-
-  /* Sticky header state (page-snap is the scroll root) */
+  /* Sticky header state */
   const onScroll = () => {
     if (!header) return;
-    const y = pageSnap ? pageSnap.scrollTop : window.scrollY;
+    const root = scrollRoot();
+    const y = root === window ? window.scrollY : root.scrollTop;
     header.classList.toggle("is-scrolled", y > 24);
   };
 
   onScroll();
-  (pageSnap || window).addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
+  pageSnap?.addEventListener("scroll", onScroll, { passive: true });
 
   /* Mobile nav */
   const setNavOpen = (open) => {
@@ -57,7 +33,9 @@
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
     document.body.style.overflow = open ? "hidden" : "";
-    if (pageSnap) pageSnap.style.overflowY = open ? "hidden" : "";
+    if (!isMobileLayout() && pageSnap) {
+      pageSnap.style.overflowY = open ? "hidden" : "";
+    }
   };
 
   toggle?.addEventListener("click", () => {
@@ -96,7 +74,7 @@
     if (event.key === "Escape") setNavOpen(false);
   });
 
-  /* Inner scroll end → snap to next/prev panel */
+  /* Inner scroll end → snap to next/prev panel (desktop snap layout only) */
   let snapLock = false;
   const WHEEL_THRESHOLD = 12; // smaller = easier snap
   let wheelAcc = 0;
@@ -115,6 +93,8 @@
     scroller.addEventListener(
       "wheel",
       (event) => {
+        if (isMobileLayout()) return;
+
         if (snapLock) {
           event.preventDefault();
           return;
@@ -173,7 +153,7 @@
         });
       },
       {
-        root: pageSnap || null,
+        root: isMobileLayout() ? null : pageSnap || null,
         rootMargin: "-40% 0px -50% 0px",
         threshold: 0,
       }
