@@ -38,6 +38,7 @@
 html {
   height: 100%;
   scroll-behavior: smooth;
+  background-color: var(--paper);
 }
 
 body {
@@ -51,6 +52,7 @@ body {
     radial-gradient(1200px 700px at 85% -10%, rgba(159, 191, 189, 0.35), transparent 60%),
     radial-gradient(900px 600px at -10% 20%, rgba(212, 101, 74, 0.08), transparent 55%),
     linear-gradient(180deg, #eef3f2 0%, var(--paper) 28%, var(--paper) 100%);
+  background-color: var(--paper);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -98,20 +100,42 @@ button {
 /* ---------- Page scroll snap ---------- */
 
 .page-snap {
+  height: 100vh;
   height: 100dvh;
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  background-color: var(--paper);
 }
 
 .snap-panel {
+  height: 100vh;
   height: 100dvh;
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   overflow: hidden;
+  background-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .page-snap,
+  .snap-panel {
+    /* Prefer stable small viewport; JS may override with --app-height */
+    height: 100svh;
+    height: var(--app-height, 100svh);
+  }
+
+  .page-snap {
+    /* Lock scroll root to the visible viewport on mobile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .snap-panel__scroll {
@@ -166,15 +190,12 @@ button {
 }
 
 .logo-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 0.55rem;
+  object-fit: cover;
   background: var(--slate);
-  color: #f4f7f6;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
 }
 
 .logo-text {

@@ -6,10 +6,39 @@
   const pageSnap = document.querySelector(".page-snap");
   const panels = Array.from(document.querySelectorAll(".snap-panel"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isMobileSnap = () => window.matchMedia("(max-width: 900px)").matches;
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
+
+  /* Keep snap height aligned with the visible viewport (mobile URL bar) */
+  const syncAppHeight = () => {
+    if (!isMobileSnap()) {
+      document.documentElement.style.removeProperty("--app-height");
+      if (pageSnap) {
+        pageSnap.style.top = "";
+        pageSnap.style.height = "";
+      }
+      return;
+    }
+
+    const vv = window.visualViewport;
+    const height = Math.round(vv?.height || window.innerHeight);
+    const top = Math.round(vv?.offsetTop || 0);
+
+    document.documentElement.style.setProperty("--app-height", `${height}px`);
+
+    if (pageSnap) {
+      pageSnap.style.top = `${top}px`;
+      pageSnap.style.height = `${height}px`;
+    }
+  };
+
+  syncAppHeight();
+  window.addEventListener("resize", syncAppHeight, { passive: true });
+  window.visualViewport?.addEventListener("resize", syncAppHeight, { passive: true });
+  window.visualViewport?.addEventListener("scroll", syncAppHeight, { passive: true });
 
   /* Sticky header state (page-snap is the scroll root) */
   const onScroll = () => {
