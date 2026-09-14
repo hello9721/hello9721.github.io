@@ -131,50 +131,50 @@ button {
 
 @media (max-width: 900px) {
   /*
-    Nested 100%-tall snap + inner scroll leaves a dark Chrome letterbox
-    when the URL/toolbars resize. Use normal document scroll on mobile.
+    Keep section snap, but drop nested inner scrollers.
+    One scroll root avoids Chrome's dark bottom letterbox.
   */
-  html {
-    height: auto;
-    min-height: 100%;
-    scroll-padding-top: var(--header-h);
-    overflow-x: hidden;
-    overflow-y: auto;
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
   }
 
-  body {
-    height: auto;
-    min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+  html {
+    scroll-padding-top: 0;
   }
 
   .page-snap {
-    height: auto;
+    height: 100%;
+    height: 100dvh;
+    height: var(--app-height, 100dvh);
     max-height: none;
-    overflow: visible;
-    scroll-snap-type: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: none;
     background-color: #f2f5f4;
   }
 
   .snap-panel {
     height: auto;
+    min-height: 100%;
     max-height: none;
-    min-height: 0;
     overflow: visible;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     background-color: #f2f5f4;
   }
 
   .snap-panel__scroll {
     height: auto;
+    min-height: 100%;
     overflow: visible;
     -webkit-overflow-scrolling: auto;
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: 100%;
   }
 }
 

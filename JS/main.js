@@ -8,23 +8,34 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mobileMq = window.matchMedia("(max-width: 900px)");
   const isMobileLayout = () => mobileMq.matches;
-  const scrollRoot = () => (isMobileLayout() || !pageSnap ? window : pageSnap);
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
 
-  /* Sticky header state */
+  /* Match scroll root height to visible viewport (no position:fixed) */
+  const syncAppHeight = () => {
+    if (!isMobileLayout()) {
+      document.documentElement.style.removeProperty("--app-height");
+      return;
+    }
+    const height = Math.round(window.visualViewport?.height || window.innerHeight);
+    document.documentElement.style.setProperty("--app-height", `${height}px`);
+  };
+
+  syncAppHeight();
+  window.addEventListener("resize", syncAppHeight, { passive: true });
+  window.visualViewport?.addEventListener("resize", syncAppHeight, { passive: true });
+
+  /* Sticky header state (page-snap is the scroll root) */
   const onScroll = () => {
     if (!header) return;
-    const root = scrollRoot();
-    const y = root === window ? window.scrollY : root.scrollTop;
+    const y = pageSnap ? pageSnap.scrollTop : window.scrollY;
     header.classList.toggle("is-scrolled", y > 24);
   };
 
   onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-  pageSnap?.addEventListener("scroll", onScroll, { passive: true });
+  (pageSnap || window).addEventListener("scroll", onScroll, { passive: true });
 
   /* Mobile nav */
   const setNavOpen = (open) => {
@@ -33,9 +44,7 @@
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
     document.body.style.overflow = open ? "hidden" : "";
-    if (!isMobileLayout() && pageSnap) {
-      pageSnap.style.overflowY = open ? "hidden" : "";
-    }
+    if (pageSnap) pageSnap.style.overflowY = open ? "hidden" : "";
   };
 
   toggle?.addEventListener("click", () => {
@@ -153,7 +162,7 @@
         });
       },
       {
-        root: isMobileLayout() ? null : pageSnap || null,
+        root: pageSnap || null,
         rootMargin: "-40% 0px -50% 0px",
         threshold: 0,
       }
