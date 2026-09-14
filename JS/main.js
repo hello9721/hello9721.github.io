@@ -6,26 +6,10 @@
   const pageSnap = document.querySelector(".page-snap");
   const panels = Array.from(document.querySelectorAll(".snap-panel"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const mobileMq = window.matchMedia("(max-width: 900px)");
-  const isMobileLayout = () => mobileMq.matches;
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
-
-  /* Match scroll root height to visible viewport (no position:fixed) */
-  const syncAppHeight = () => {
-    if (!isMobileLayout()) {
-      document.documentElement.style.removeProperty("--app-height");
-      return;
-    }
-    const height = Math.round(window.visualViewport?.height || window.innerHeight);
-    document.documentElement.style.setProperty("--app-height", `${height}px`);
-  };
-
-  syncAppHeight();
-  window.addEventListener("resize", syncAppHeight, { passive: true });
-  window.visualViewport?.addEventListener("resize", syncAppHeight, { passive: true });
 
   /* Sticky header state (page-snap is the scroll root) */
   const onScroll = () => {
@@ -83,7 +67,7 @@
     if (event.key === "Escape") setNavOpen(false);
   });
 
-  /* Inner scroll end → snap to next/prev panel (desktop snap layout only) */
+  /* Inner scroll end → snap to next/prev panel */
   let snapLock = false;
   const WHEEL_THRESHOLD = 12; // smaller = easier snap
   let wheelAcc = 0;
@@ -102,8 +86,6 @@
     scroller.addEventListener(
       "wheel",
       (event) => {
-        if (isMobileLayout()) return;
-
         if (snapLock) {
           event.preventDefault();
           return;
